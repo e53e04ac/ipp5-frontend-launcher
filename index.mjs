@@ -86,6 +86,7 @@ const constructor = ((options) => {
                     TZ: _options.containerTimezoneId(),
                     WEBSITES_PORT: _options.containerAppPort(),
                 },
+                space: 4,
             });
         }),
         runAzAcrLogin: hold(async () => {
