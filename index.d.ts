@@ -9,15 +9,11 @@ import { EventEmitter } from 'event-emitter';
 import { FileEntry } from 'file-entry';
 import { Get } from 'hold';
 import { ValueOrGet } from 'hold';
+import { Ipp5FrontendEnvMap } from 'ipp5-types';
 
 export declare namespace Ipp5FrontendLauncher {
 
-    type EnvMap = {
-        readonly TZ: string;
-        readonly WEBSITES_PORT: number;
-    };
-
-    type EventSpecs = Record<never, never>;
+    type EnvMap = Ipp5FrontendEnvMap;
 
     type Options = {
         readonly az: ValueOrGet<string>;
@@ -34,6 +30,8 @@ export declare namespace Ipp5FrontendLauncher {
         readonly webappName: ValueOrGet<string>;
         readonly webappDeploymentContainerImageName: ValueOrGet<string>;
     };
+
+    type EventSpecs = Record<never, never>;
 
     type _Self = {
         readonly options: Get<Options>;
